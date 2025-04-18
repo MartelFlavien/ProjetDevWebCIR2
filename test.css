@@ -1,0 +1,711 @@
+body{
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************** BOUTON RETOUR HAUT DE PAGE  ****************************/
+
+#btn-haut {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    background-color: rgb(0, 87, 116);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 10px 16px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: opacity 0.3s ease;
+}
+#btn-haut:hover {
+    background-color: rgb(3, 34, 76);
+}
+
+
+
+/**************************** MODE SOMBRE  ****************************/
+
+#haut{
+    display: flex;
+    justify-content: space-between;
+}
+
+#toggle-dark-mode {
+    position: relative;
+    margin-top: 1%;
+}
+
+body.dark-mode {
+    background-color: #525050;
+    color: #f1f1f1;
+}
+
+/* ENTÊTE */
+body.dark-mode .entete {
+    border-bottom-color: #444;
+}
+body.dark-mode .entete > div {
+    background-color: #525050;
+}
+body.dark-mode .entete > div > a {
+    color: #88d4f5;
+}
+body.dark-mode .entete > div:hover {
+    background-color: #005774;
+}
+body.dark-mode .entete > div:hover a {
+    color: white;
+}
+body.dark-mode #trait_dessus {
+    border-top-color: #444;
+}
+body.dark-mode .tete2 > h1 {
+    color: #88d4f5;
+}
+
+/* SLIDER */
+body.dark-mode #slider {
+    border-color: #555;
+}
+
+/* BOUTONS */
+body.dark-mode .boutton button {
+    background-color: #005774;
+    color: white;
+}
+body.dark-mode .boutton button:hover {
+    background-color: #0a3952;
+}
+
+/* MENTIONS LÉGALES */
+body.dark-mode .mention {
+    background-color: #222;
+}
+body.dark-mode .mention > a {
+    color: #ddd;
+}
+body.dark-mode .mention > a:hover {
+    color: white;
+}
+
+/* TABLE TARIFS */
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td {
+    border-color: #88d4f5;
+    background-color: #1c1c1c;
+    color: #f1f1f1;
+}
+
+/* FORMULAIRES - CONTACT ET RDV */
+body.dark-mode section#contact,
+body.dark-mode section#rdv {
+    background-color: #181818;
+}
+body.dark-mode section#contact .contacter,
+body.dark-mode section#rdv .devis {
+    background-color: #242424;
+    box-shadow: none;
+}
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #2b2b2b;
+    color: #fff;
+    border-bottom: 2px solid #555;
+}
+body.dark-mode input:hover,
+body.dark-mode textarea:hover {
+    border-bottom: 2px solid #88d4f5;
+}
+body.dark-mode section#contact .contacter form button,
+body.dark-mode section#rdv .devis form button {
+    background-color: #005774;
+}
+body.dark-mode section#contact .contacter form button:hover,
+body.dark-mode section#rdv .devis form button:hover {
+    background-color: #0a3952;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* TEXTES DATES */
+body.dark-mode .date > h2:first-of-type {
+    color: #ccc;
+}
+body.dark-mode .date > h2:nth-of-type(2) {
+    color: #88d4f5;
+}
+
+/* OCCASIONS */
+body.dark-mode .occasion {
+    color: #ddd;
+}
+
+
+
+/**************************** LE HEADER  ****************************/
+.hide{
+    display: none;
+}
+.entete{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(0, 87, 116);
+}
+.entete>div{
+    background-color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 5%;
+    padding-bottom: 1%;
+}
+.entete>div>a{
+    font-size: 5vw;
+    color: rgb(0, 87, 116);
+    text-decoration: none;
+    padding-top: 100%;
+    padding-bottom: 100%;
+    font-weight: bold;
+}
+.entete>div:hover{
+    background-color: rgb(0, 87, 116);
+}
+.entete>div:hover a{
+    color: white;
+}
+#trait_dessus
+{
+border-top: 4px solid rgb(0, 87, 116);
+width : 100%;
+} 
+.tete2{
+    margin-top: -5%;
+    margin-bottom: -4%;
+}
+.tete2>h1{
+    font-size: 8vw;
+    text-align: center;
+    color: rgb(0, 87, 116);
+}
+
+.tete{
+    margin-top: -1%;
+}
+
+
+/**************************** LE SLIDER PROMO ****************************/
+
+#slider {
+    overflow: hidden;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#slider figure {
+    position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+
+    transition: left 1s ease-in-out;
+}
+
+#slider figure img {
+    width: 20%;
+	float: left;
+}
+
+#brise1 {
+    display: none;
+}
+/**************************** PAGE MAIN ****************************/
+.team{
+    margin-top: 2%;
+}
+
+.team>h2{
+    font-size: 5vw;
+}
+.boutton{
+    margin-top: 2%;
+}
+.boutton>div>div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.B{
+    width: 60%;
+}
+.B>div>img{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.boutton button {
+    border: none;
+    border-radius: 2rem;
+    background-color: rgb(0, 87, 116);
+    color: white;
+    width: 100%;
+
+}
+.boutton button:hover {
+    color: white;
+    background: rgb(3, 34, 76);
+    border-color: black;
+}
+iframe{
+    margin-top: 5%;
+    width: 100%;
+}
+.mention{
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.mention>a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 3vw;
+    margin-left: 3%;
+}
+.mention>a:hover{
+    text-decoration: underline;
+}
+
+
+/**************************** PAGE TARIFS ****************************/
+.tarifs>h1{
+    text-align: center;
+}
+.tableau{
+    margin-left: auto;
+    margin-right: auto;
+}
+.tableau th{
+    padding-left: 6px;
+    padding-right: 6px;
+}
+table, caption, th, td {
+    font-size: 1.5vw;
+    border: 2px solid rgb(0, 87, 116);
+    border-collapse: collapse;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    }
+td{
+    text-align: center;
+}
+#T>th{
+    font-size:2vw;
+}
+
+
+/**************************** PAGE CONTACT ****************************/
+section#contact{
+    background-color: #f9f9fb;
+    padding: 100px 15px ;
+}
+section#contact .contacter{
+    max-width: 900;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 60px 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0px 10px 50px -10px #d6d6d6;
+    margin-top: -4%;
+}
+section#contact .contacter .title h6{
+    font-size: 1em;
+    text-align: center;
+}
+section#contact .contacter .title h3{
+    font-size: 2em;
+    text-align: center;
+}
+section#contact .contacter form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 95%;
+    max-width: 600px;
+}
+section#contact .contacter form input {
+    width: 100%;
+}
+section#contact .contacter form input:hover,
+section#contact .contacter form textarea:hover {
+    border-bottom: 2px solid lightgrey;
+}
+section#contact .contacter form input,
+section#contact .contacter form textarea {
+    margin: 15px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid grey;
+    transition: 0.2s;
+}
+section#contact .contacter textarea {
+    width: 100%;
+    resize: none;
+    height: 100px;
+    margin-bottom: 60px;
+}
+section#contact .contacter form button{
+    width: 192px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    outline: none;
+    margin: 0 auto;
+    transition: 0.2s;
+}
+section#contact .contacter form button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 40px 0px #d6d6d6;
+}
+.date{
+    position: absolute;
+}
+.date h2{
+    display: inline-block;
+}
+.date>h2:first-of-type{
+    color: grey;
+    font-size: 4vw;
+}
+.date>h2:nth-of-type(2){
+    font-weight: bold;
+    color: rgb(0, 87, 116);
+    font-size: 5vw;
+    margin-bottom: 3%;
+}
+
+
+/**************************** LA PAGE VOITURE OCCASION ****************************/
+.occasion{
+    margin-top: 10%;
+    font-size: 1.2em;
+}
+
+
+
+
+/**************************** PAGE DEVIS ET RDV ****************************/
+    
+
+section#rdv{
+    background-color: #f9f9fb;
+    padding: 100px 15px ;
+}
+section#rdv .devis{
+    max-width: 900;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 60px 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0px 10px 50px -10px #d6d6d6;
+    margin-top: -4%
+}
+section#rdv .devis .title2 h6{
+    font-size: 1em;
+    text-align: center;
+}
+section#rdv .devis .title2 h3{
+    font-size: 2em;
+    text-align: center;
+}
+section#rdv .devis form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 95%;
+    max-width: 600px;
+}
+section#rdv .devis form input {
+    width: 100%;
+}
+section#rdv .devis form input:hover,
+section#rdv .devis form textarea:hover {
+    border-bottom: 2px solid lightgrey;
+}
+section#rdv .devis form input,
+section#rdv .devis form textarea {
+    margin: 15px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid grey;
+    transition: 0.2s;
+}
+section#rdv .devis textarea {
+    width: 100%;
+    resize: none;
+    height: 100px;
+    margin-bottom: 60px;
+}
+section#rdv .devis form button{
+    width: 192px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    outline: none;
+    margin: 0 auto;
+    transition: 0.2s;
+}
+section#rdv .devis form button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 40px 0px #d6d6d6;
+}
+.date{
+    position: absolute;
+}
+.date h2{
+    display: inline-block;
+}
+.date>h2:first-of-type{
+    color: grey;
+    font-size: 4vw;
+}
+.date>h2:nth-of-type(2){
+    font-weight: bold;
+    color: rgb(0, 87, 116);
+    font-size: 6vw;
+    margin-bottom: 10%;
+}
+
+
+
+/***************************************************** LE RESPONSIVE *****************************************************/
+
+/*********************** POUR ECRAN ORDI ET TABLETTE ***********************/
+
+@media screen and (min-width: 768px){
+    /******************* LE HEADER  *******************/
+    .hide{
+        display: block;
+    }
+    .entete>div>a{
+        font-size: 3vw;
+    }
+    .entete{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(0, 87, 116);
+}
+.entete>div{
+    background-color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 5%;
+    padding-bottom: 1%;
+}
+.entete>div>a{
+    font-size: 3vw;
+    color: rgb(0, 87, 116);
+    text-decoration: none;
+    padding-top: 100%;
+    padding-bottom: 100%;
+    font-weight: bold;
+}
+.entete>div:hover{
+    background-color: rgb(0, 87, 116);
+}
+.entete>div:hover a{
+    color: white;
+}
+#trait_dessus
+{
+border-top: 4px solid rgb(0, 87, 116);
+width : 100%;
+} 
+.tete2{
+    margin-top: -5%;
+    margin-bottom: -4%;
+}
+.tete2>h1{
+    font-size: 8vw;
+    text-align: center;
+    color: rgb(0, 87, 116);
+}
+
+    /******************* LE SLIDER PROMO *******************/
+    #brise2{
+        display: none;
+    }
+    #brise1{
+        display: revert;
+    }
+
+    /******************* PAGE MAIN *******************/
+    .team>h2{
+        font-size: 3vw;
+    }
+    .boutton>div {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .B{
+        width: 100%;
+    }
+
+    .B>div>img{
+        width: 90%;
+
+    }
+
+    /******************* PAGE CONTACT *******************/
+    section#contact .contacter{
+        margin-top: 0;
+    }
+    section#contact .contacter form {
+        flex-direction: row;
+        width: 60%;
+    }
+    section#contact .contacter form input {
+        width: 45%;
+    }
+    section#contact .contacter .title h6{
+        font-size: 1.2em;
+    }   
+    section#contact .contacter .title h3{
+        font-size: 2.8em;
+    }
+    .date>h2:first-of-type{
+        font-size: 3vw;
+    }
+    .date>h2:nth-of-type(2){
+        font-size: 3vw;
+        margin-bottom: 0%;
+    }
+
+    /******************* LA PAGE VOITURE OCCASION *******************/
+    .occasion{
+        margin-top: 6%;
+        font-size: 2em;
+    }
+
+
+    /******************* PAGE DEVIS ET RDV *******************/
+    section#rdv .devis{
+        margin-top: 0%;
+    }
+    section#rdv .devis form {
+        flex-direction: row;
+        width: 60%;
+    }
+    section#rdv .devis form input {
+        width: 45%;
+    }
+    section#rdv .devis .title2 h6{
+        font-size: 1.2em;
+    }   
+    section#rdv .devis .title h3{
+        font-size: 2.8em;
+    }
+    .date h2{
+        font-size: 3vw;;
+    }
+
+
+    /******************* LIEN MENTION LEGALE *******************/
+    .mention>a{
+        font-size: 1.7vw;
+    }
+
+
+
+
+
+    /*********************** POUR ECRAN ORDI ***********************/
+
+@media screen and (min-width: 1024px){
+    /******************* LE HEADER  *******************/
+    .entete>div>a{
+        font-size: 1.1vw;
+    }
+    .tete2>h1{
+        font-size: 5.5vw;
+    }
+    #trait_dessus{
+        visibility: hidden;
+    }
+    .tete{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    .entete{
+        border-bottom: none;
+    }
+    .entete>div{
+        padding-top: 20%;
+    }
+    .tete2{
+        padding-top: 3%;
+    }
+
+    /******************* PAGE MAIN *******************/
+    .team>h2{
+        font-size: 3vw;
+    }
+}
+
+}
+
+
+
+
+
+
+
+
+
+
